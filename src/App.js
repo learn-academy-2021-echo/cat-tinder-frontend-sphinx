@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom'
 import mockCats from './mockCats.js'
 import './App.css'
+import NotFoundSphinx from './assets/notFoundSphinx.svg'
 
 
 

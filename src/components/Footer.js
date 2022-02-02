@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import './Footer.css'
 
 class Footer extends Component {
 
 
   render() {
     return(
-    <div>
-      <h1>Footer page</h1>
+    <div id="footer">
+      <p>Copyright &copy; 2022 Sphinx, Noah & Gluay</p>
 
     </div>
     )
