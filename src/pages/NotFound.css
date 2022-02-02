@@ -1,0 +1,37 @@
+#notFound404 {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    
+}
+#notFound404  img {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 25px 0;
+
+}
+
+#notFound404 a {
+    text-decoration: none;
+    font-size: 20px;
+    width: 230px;
+    height: 40px;
+    background-color: plum;
+    border-radius: 20px ;
+    text-align: center;  
+    color:#3b6772;
+    font-weight: 500;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#notFound404 a:hover {
+    background-color: #3b6772;
+    color:#fff;
+}

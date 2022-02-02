@@ -1,0 +1,9 @@
+#header {
+    background-color: #042445;
+    padding: 20px 0;
+}
+
+#header a img {
+    width: 35%;
+    height: auto;
+}
