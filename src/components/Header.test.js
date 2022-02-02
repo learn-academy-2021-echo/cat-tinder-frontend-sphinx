@@ -6,7 +6,7 @@ import Header from "./Header";
 Enzyme.configure({adapter: new Adapter()})
 
 describe("When Header renders", () => {
-    it("displays the header page", () => {
+    it("displays a clickable link inside an anchor tag", () => {
         const head = shallow(<Header />)
         const headPage = head.find("a")
         expect(headPage.length).toEqual(1)

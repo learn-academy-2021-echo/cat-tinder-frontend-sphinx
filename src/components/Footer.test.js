@@ -6,7 +6,7 @@ import Footer from "./Footer";
 Enzyme.configure({adapter: new Adapter()})
 
 describe("When Footer renders", () => {
-    it("displays the Footer page", () => {
+    it("displays the Footer component with the applicable text", () => {
         const foot = shallow(<Footer />)
         const footPage = foot.find("p").text()
         expect(footPage).toEqual("Copyright © 2022 Sphinx, Noah & Gluay")

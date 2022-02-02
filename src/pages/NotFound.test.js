@@ -6,9 +6,9 @@ import NotFound from "./NotFound";
 Enzyme.configure({adapter: new Adapter()})
 
 describe("When NotFound renders", () => {
-    it("displays 404 page", () => {
+    it("displays a link with text in an anchor tag", () => {
         const lost = shallow(<NotFound />)
-        const lostPage = lost.find("a")
-        expect(lostPage.length).toEqual(1)
+        const lostPage = lost.find("a").text()
+        expect(lostPage).toEqual("Back to homepage")
     })
 })
