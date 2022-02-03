@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
 class CatShow extends Component {
-
-
   render() {
+    const { cat } = this.props
     return(
-    <div>
+    <>
       <h1>CatShow page</h1>
-
-    </div>
+      <p>Name: {cat ? cat.name : null }</p>
+      <p>Age: {cat ? cat.age : null }</p>
+      <p>Enjoys: {cat ? cat.enjoys : null }</p>
+      
+      { cat ? <img src={cat.image} alt="cute cat pic" width ="300px"/> : null }
+    </>
     )
   }
 }
