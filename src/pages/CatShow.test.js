@@ -9,6 +9,6 @@ describe("When CatShow renders", () => {
     it("displays name, age, and enjoys from cats", () => {
         const catShow = shallow(<CatShow />)
         const catInfo = catShow.find("p")
-        expect(catInfo.length).toEqual(3)
+        expect(catInfo.length).toEqual(4)
     })
 })
