@@ -1,11 +1,16 @@
 #header {
     background-color: #042445;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 #header a img {
     width: 35%;
     height: auto;
+}
+
+#header a img:hover {
+    /* transform: scale(1.05); */
+    filter: hue-rotate(90deg);
 }
 
 a#homepage-btn  {
