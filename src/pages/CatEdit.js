@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap'
 import { Redirect } from 'react-router-dom';
+import './CatEdit.css';
+;
+
 
 class CatEdit extends Component {
   constructor(props){ 
@@ -30,8 +33,8 @@ class CatEdit extends Component {
 
   render() {
     return(
-    <div>
-      <h1>CatEdit page</h1>
+    <div id="cat-edit-container">
+      <h1>Edit your cat!</h1>
       <Form>
           <FormGroup>
             <Label for="name">Name</Label>

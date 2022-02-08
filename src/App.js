@@ -22,13 +22,37 @@ class App extends Component {
     constructor(props){
       super(props)
         this.state = {
-          cats: cats
+          cats: []
         }
     }
 
+    componentDidMount(){
+      this.readCat()
+    }
 
-    createCat = (cat) => {
-      console.log("Cat has been created", cat);
+    readCat = () => {
+      fetch("http://localhost:3000/cats")
+      .then(response => response.json())
+      .then(catsArray => this.setState({cats: catsArray}))
+      .catch(errors => console.log("Cat read errors:", errors))
+    }
+
+
+    // createCat = (cat) => {
+    //   console.log("Cat has been created", cat);
+    // }
+
+    createCat = (newCat) => {
+      fetch("http://localhost:3000/cats", {
+        body: JSON.stringify(newCat),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        method: "POST"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("Cat create errors:", errors))
     }
 
     updateCat = (cat, id) => {

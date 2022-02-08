@@ -77,7 +77,7 @@ class CatNew extends Component {
             onChange={this.handleChange}
           />
         </FormGroup>
-        <Button id='addcatbutton' onClick={this.handleSubmit} name = 'submit'>Add your cat.</Button>
+        <Button id='addcatbutton' onClick={this.handleSubmit} name = 'submit'>Add your cat</Button>
       </Form>
       {this.state.submitted && <Redirect to='/catindex'/> }
     </div>

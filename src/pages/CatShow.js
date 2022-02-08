@@ -8,12 +8,18 @@ class CatShow extends Component {
     return(
     <>
       <div id="cat-show-container">
-      <h1>CatShow page</h1>
-      <p>Name: {cat ? cat.name : null }</p>
-      <p>Age: {cat ? cat.age : null }</p>
-      <p>Enjoys: {cat ? cat.enjoys : null }</p>
-      
+      {/* <h1>CatShow page</h1> */}
+      <div id="cat-show-image">
       { cat ? <img src={cat.image} alt="cute cat pic" width ="300px"/> : null }
+      </div>
+
+      <div id="cat-show-info">
+        <p>Name: <span class="span-txt-show">{cat ? cat.name : null }</span></p>
+        <p>Age: <span class="span-txt-show">{cat ? cat.age : null }</span></p>
+        <p>Enjoys: <span class="span-txt-show">{cat ? cat.enjoys : null }</span></p>
+      </div>
+      
+      
 
       { cat ? <NavLink id="edit-btn" to={`/catedit/${cat.id}`} key={cat.id}>
           <p>Edit Cat Info</p>

@@ -8,7 +8,7 @@ class NotFound extends Component {
     return(
     <div id="notFound404">
       <img src={ NotFoundSphinx } alt="error_404" />
-      <a href="http://localhost:3000/">Back to homepage</a>
+      <a href="http://localhost:3001/catindex">Back to homepage</a>
     </div>
     )
   }
