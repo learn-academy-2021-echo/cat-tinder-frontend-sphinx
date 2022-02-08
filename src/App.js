@@ -12,7 +12,6 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import cats from './mockCats'
 import './App.css'
 
 
@@ -38,10 +37,6 @@ class App extends Component {
     }
 
 
-    // createCat = (cat) => {
-    //   console.log("Cat has been created", cat);
-    // }
-
     createCat = (newCat) => {
       fetch("http://localhost:3000/cats", {
         body: JSON.stringify(newCat),
@@ -56,9 +51,33 @@ class App extends Component {
     }
 
     updateCat = (cat, id) => {
-      console.log("cat:", cat)
-      console.log("id:", id)
+      fetch(`http://localhost:3000/cats/${id}`, {
+        // converting an object to a string
+        body: JSON.stringify(cat),
+        // specify the info being sent in JSON and the info returning should be JSON
+        headers: {
+          "Content-Type": "application/json"
+        },
+        // HTTP verb so the correct endpoint is invoked on the server
+        method: "PATCH"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("Cat update errors: ", errors))
     }
+
+    deleteCat = (id) => {
+      fetch(`http://localhost:3000/cats/${id}`, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        method: "DELETE"
+      })
+      .then(response => response.json())
+      .then(payload => this.readCat())
+      .catch(errors => console.log("delete errors:", errors))
+    }
+
 
   render() {
     return(
@@ -77,8 +96,7 @@ class App extends Component {
                   render={(props) => {
                     let paramId = +props.match.params.id
                     let cat = this.state.cats.find(cat => cat.id === paramId)
-                    return <CatShow cat={cat} />
-                  }} 
+                    return <CatShow cat={cat} deleteCat={this.deleteCat} />}} 
                   />
                   
                   <Route

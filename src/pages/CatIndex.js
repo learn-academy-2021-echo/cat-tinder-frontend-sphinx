@@ -8,7 +8,7 @@ class CatIndex extends Component {
   render() {
     return(
     <div id="cat-index-container">
-      <h1>Meet our <span class="span-txt">furry</span> friends!</h1>
+      <h1>Meet our <span className="span-txt">furry</span> friends!</h1>
         {this.props.cats ? this.props.cats.map(cat => {
           return (
           <NavLink to={`/catshow/${cat.id}`} key={cat.id}>

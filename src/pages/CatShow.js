@@ -2,7 +2,21 @@ import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import './CatShow.css'
 
+
 class CatShow extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      submitted: false
+    }
+  }
+
+  handleSubmit = () => {
+    this.props.deleteCat(this.props.cat.id)
+    this.setState({ submitted: true })
+  }
+
+
   render() {
     const { cat } = this.props
     return(
@@ -14,9 +28,9 @@ class CatShow extends Component {
       </div>
 
       <div id="cat-show-info">
-        <p>Name: <span class="span-txt-show">{cat ? cat.name : null }</span></p>
-        <p>Age: <span class="span-txt-show">{cat ? cat.age : null }</span></p>
-        <p>Enjoys: <span class="span-txt-show">{cat ? cat.enjoys : null }</span></p>
+        <p>Name: <span className="span-txt-show">{cat ? cat.name : null }</span></p>
+        <p>Age: <span className="span-txt-show">{cat ? cat.age : null }</span></p>
+        <p>Enjoys: <span className="span-txt-show">{cat ? cat.enjoys : null }</span></p>
       </div>
       
       
@@ -24,6 +38,9 @@ class CatShow extends Component {
       { cat ? <NavLink id="edit-btn" to={`/catedit/${cat.id}`} key={cat.id}>
           <p>Edit Cat Info</p>
       </NavLink> : <p>Go to create Cat</p>}
+      <NavLink to="/catindex" onClick={this.handleSubmit}>
+          Delete Cat Profile
+      </NavLink>
       </div>
      
     </>
