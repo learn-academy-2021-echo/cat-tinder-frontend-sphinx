@@ -1,0 +1,67 @@
+
+#cat-edit-container {
+    width:65%;
+    height: auto;
+    margin: 0 auto;
+    padding: 35px 0;
+    /* text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+    color:#3b6772;
+    font-size: 35px;
+    margin-bottom: 20px; */
+}
+
+#cat-edit-container h1 {
+    text-align: center;
+    color:#3b6772;
+    font-weight: 700;
+}
+
+#cat-edit-container label {
+    color:#3b6772;
+    font-weight: 500;
+}
+
+#cat-edit-container button {
+    display: block;
+    float: right;
+    justify-content: right;
+    margin-bottom: 150px;
+    margin-top:15px;
+    background-color: plum;
+    border:none;
+    color:#fff;
+    font-weight: 700;
+}
+
+#cat-edit-container button:hover {
+    background-color: #3b6772;
+    transform: scale(1.1);
+}
+
+
+/* #inputform {
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#addcatbutton {
+    display: block;
+    float: right;
+    justify-content: right;
+    margin-bottom: 150px;
+    margin-top:15px;
+    background-color: plum;
+    border:none;
+    color:#fff;
+    font-weight: 700;
+   
+}
+
+#addcatbutton:hover {
+    background-color: #3b6772;
+    transform: scale(1.1);
+} */
+

@@ -11,7 +11,7 @@ class CatNew extends Component {
        name: "",
        age: "",
        enjoys: "",
-       img: ""
+       image: ""
      },
      submitted: false
    }
@@ -42,6 +42,7 @@ class CatNew extends Component {
             name="name"
             placeholder="Please enter your cat's name."
             onChange={this.handleChange}
+            value={this.state.newCat.name}
             />
         </FormGroup>
 
@@ -53,6 +54,7 @@ class CatNew extends Component {
             name="age"
             placeholder='How old is your cat?'
             onChange={this.handleChange}
+            value={this.state.newCat.age}
             />
         </FormGroup>
 
@@ -64,20 +66,22 @@ class CatNew extends Component {
             name="enjoys"
             placeholder='What does your cat enjoy doing?'
             onChange={this.handleChange}
+            value={this.state.newCat.enjoys}
             />
         </FormGroup>
         
         <FormGroup>
-          <Label for="img">Your favorite photo of your pet.</Label>
+          <Label for="image">Your favorite photo of your pet.</Label>
           <Input
             id='input'
             type="url"
-            name="img"
+            name="image"
             placeholder='Insert url here.'
             onChange={this.handleChange}
+            value={this.state.newCat.image}
           />
         </FormGroup>
-        <Button id='addcatbutton' onClick={this.handleSubmit} name = 'submit'>Add your cat.</Button>
+        <Button id='addcatbutton' onClick={this.handleSubmit} name = 'submit'>Add your cat</Button>
       </Form>
       {this.state.submitted && <Redirect to='/catindex'/> }
     </div>

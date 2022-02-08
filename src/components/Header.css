@@ -1,9 +1,35 @@
 #header {
     background-color: #042445;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 #header a img {
     width: 35%;
     height: auto;
+}
+
+#header a img:hover {
+    /* transform: scale(1.05); */
+    filter: hue-rotate(90deg);
+}
+
+a#homepage-btn  {
+    color:#fff;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    float: right;
+    align-items: flex-end;
+    
+}
+
+a#homepage-btn:hover {
+    color:#f5eb0d;
+}
+
+@media screen and (min-width: 700px) {
+    a#homepage-btn {
+        display: flex;
+    }
 }

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap'
 import { Redirect } from 'react-router-dom';
+import './CatEdit.css';
+;
+
 
 class CatEdit extends Component {
   constructor(props){ 
     super(props)
+    let { name, age, enjoys, image } = this.props.cat;
     this.state = {
       newCat: {
-        name: "",
-        age: "",
-        enjoys: "",
-        image: ""
+        name: name ? name : undefined,
+        age: age ? age : undefined,
+        enjoys: enjoys ? enjoys : undefined,
+        image: image ? image : undefined
       },
       submitted: false
     }
@@ -30,14 +34,16 @@ class CatEdit extends Component {
 
   render() {
     return(
-    <div>
-      <h1>CatEdit page</h1>
+    <div id="cat-edit-container">
+      <h1>Edit your cat!</h1>
       <Form>
           <FormGroup>
             <Label for="name">Name</Label>
             <Input
               type="text"
               name="name"
+              onChange={this.handleChange}
+              value={this.state.newCat.name}
             />
           </FormGroup>
 
@@ -46,6 +52,8 @@ class CatEdit extends Component {
             <Input
               type="number"
               name="age"
+              onChange={this.handleChange}
+              value={this.state.newCat.age}
             />
           </FormGroup>
 
@@ -54,6 +62,8 @@ class CatEdit extends Component {
             <Input
               type="text"
               name="enjoys"
+              onChange={this.handleChange}
+              value={this.state.newCat.enjoys}
             />
           </FormGroup>
 
@@ -62,6 +72,8 @@ class CatEdit extends Component {
             <Input
               type="text"
               name="image"
+              onChange={this.handleChange}
+              value={this.state.newCat.image}
             />
           </FormGroup>
           <Button

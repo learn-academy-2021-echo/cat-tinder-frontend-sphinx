@@ -1,7 +1,11 @@
+
 #catnewtitle {
     text-align: center;
     margin: 0 auto;
     padding-top: 25px;
+    color:#3b6772;
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
 #inputform {
@@ -9,12 +13,25 @@
     width: 50%;
     margin: 0 auto;
 }
-
+label {
+    color:#3b6772;
+    font-weight: 500;
+}
 #addcatbutton {
-
     display: block;
     float: right;
     justify-content: right;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    margin-top:15px;
+    background-color: plum;
+    border:none;
+    color:#fff;
+    font-weight: 700;
+   
+}
+
+#addcatbutton:hover {
+    background-color: #3b6772;
+    transform: scale(1.1);
 }
 
